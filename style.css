@@ -165,6 +165,7 @@ color: rgba(255, 255, 255, 0.516);
     height: 100vh;
     background:rgba(0, 0, 0, 0.4) ;
     backdrop-filter: blur(5px);
+    display: none;
 }
 
 .creatmodal{
@@ -232,4 +233,35 @@ padding-left: 10px;
 padding-top: 10px;
 font-weight: 400;
 font-size: 16px;
+}
+.CreatCancel{
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.Cancel{
+    width: 130px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.025);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.Creat{
+    width: 130px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid gray;
+    cursor: pointer;
 }
