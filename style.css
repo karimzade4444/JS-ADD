@@ -31,7 +31,7 @@ color: rgba(255, 255, 255, 0.516);
 .topRight p{
    color: rgba(255, 255, 255, 0.516); 
 }
-.topRight button{
+.add{
     width: 140px;
     height: 50px;
     border-radius: 10px;
