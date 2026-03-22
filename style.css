@@ -129,6 +129,7 @@ color: rgba(255, 255, 255, 0.516);
     height: 100vh;
     background:rgba(0, 0, 0, 0.4) ;
     backdrop-filter: blur(5px);
+    display: none;
 }
 .modal{
     position: absolute;
@@ -138,4 +139,22 @@ color: rgba(255, 255, 255, 0.516);
     transform: translateX(20%) translateY(10%);
     border-radius: 20px;
     border: 1px solid gray;
+}
+.modaltop{
+    display: flex;
+    padding: 20px 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+.close{
+    color: gray;
+    font-size: 20px;
+    cursor: pointer;
+}
+.imgmodal{
+    width: 95%;
+    margin: auto;
+    height: 400px;
+    background-color: gray;
+    border-radius: 20px;
 }
