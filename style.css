@@ -38,6 +38,7 @@ color: rgba(255, 255, 255, 0.516);
     font-weight: 600;
     color: rgba(0, 0, 0, 0.737);
     font-size: 16px;
+    cursor: pointer;
 }
 .Search{
     width: 40%;
@@ -54,3 +55,17 @@ color: rgba(255, 255, 255, 0.516);
     height: 450px;
 }
 
+.News{
+    width: 97%;
+    margin-left: 20px;
+    height: 60px;
+    border-radius: 15px;
+    text-align: start;
+    padding-left: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid gray;
+    color: white;
+    font-weight: bolder;
+    font-size: 17px;
+    cursor: pointer;
+}
