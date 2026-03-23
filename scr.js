@@ -97,7 +97,7 @@ render(blocks)
 
 const handleCreate = () => {
   let newBlock = {
-    id: blocks.length + 1,
+    id: Date.now(),
     img: imginp.value,
     par: nameinp.value,
     txt: tarea.value
