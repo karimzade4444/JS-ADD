@@ -21,6 +21,8 @@ let imginp = document.querySelector(".imginp")
 let tarea = document.querySelector(".tarea")
 let creatcancel = document.querySelector(".CreatCancel")
 let creatbtn = document.querySelector(".Creat")
+const count = document.querySelector(".count")
+
 
 let blocks = [
   {id:1, img: "https://i.pinimg.com/736x/06/14/fa/0614fa155de10e2072149b780c3e2e60.jpg",par:"Tajikistan", txt: "Feel the friendship"}
@@ -87,6 +89,7 @@ data.forEach((el)=>{
     backmodal.style.display = "none"
   }
 }
+count.textContent = "Всего: " + data.length;
 });
 }
 render(blocks)
