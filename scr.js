@@ -56,6 +56,10 @@ data.forEach((el)=>{
   delet.textContent = "Удалить"
   delet.classList.add("delet")
   edit.append(delet)
+  let imginmodal = document.createElement("img")
+  imginmodal.src = el.img
+  imginmodal.classList.add("imginmodal")
+  imgmodal.append(imginmodal)
   delet.onclick=()=>{
     newss.remove()
   }
