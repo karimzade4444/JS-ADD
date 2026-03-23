@@ -14,12 +14,18 @@ let modal = document.querySelector(".modal")
 let imgmodal = document.querySelector(".imgmodal")
 let textmodal = document.querySelector(".textmodal")
 let closesmodal = document.querySelector(".closes")
-
+let paraginmodal = document.querySelector(".paraginmodal")
+let textinmodal = document.querySelector(".textinmodal")
+let nameinp = document.querySelector(".nameinp")
+let imginp = document.querySelector(".imginp")
+let tarea = document.querySelector(".tarea")
 
 
 let blocks = [
   {id:1, img: "https://i.pinimg.com/736x/06/14/fa/0614fa155de10e2072149b780c3e2e60.jpg",par:"Tajikistan", txt: "Feel the friendship"}
 ]
+
+
 
 function render(data){
   middle.innerHTML="";
@@ -60,6 +66,8 @@ data.forEach((el)=>{
   imginmodal.src = el.img
   imginmodal.classList.add("imginmodal")
   imgmodal.append(imginmodal)
+  paraginmodal.textContent = el.par;
+  textinmodal.textContent = el.txt;
   delet.onclick=()=>{
     newss.remove()
   }
@@ -72,6 +80,19 @@ data.forEach((el)=>{
 });
 }
 render(blocks)
+
+const handleCreate = () => {
+  let newBlock = {
+    id: blocks.length + 1,
+    img: imginp.value,
+    par: nameinp.value,
+    txt: tarea.value
+  };
+  blocks.push(newBlock);
+  render(blocks);
+};
+
+
 
 
 
