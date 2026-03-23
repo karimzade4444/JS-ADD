@@ -19,7 +19,8 @@ let textinmodal = document.querySelector(".textinmodal")
 let nameinp = document.querySelector(".nameinp")
 let imginp = document.querySelector(".imginp")
 let tarea = document.querySelector(".tarea")
-
+let creatcancel = document.querySelector(".CreatCancel")
+let creatbtn = document.querySelector(".Creat")
 
 let blocks = [
   {id:1, img: "https://i.pinimg.com/736x/06/14/fa/0614fa155de10e2072149b780c3e2e60.jpg",par:"Tajikistan", txt: "Feel the friendship"}
@@ -62,24 +63,33 @@ data.forEach((el)=>{
   delet.textContent = "Удалить"
   delet.classList.add("delet")
   edit.append(delet)
+  delet.onclick=()=>{
+    newss.remove()
+  }
+  view.onclick = () => {
+  backmodal.style.display = "block"
+
+  // очищаем модалку
+  imgmodal.innerHTML = ""
+
+  // создаём новую картинку
   let imginmodal = document.createElement("img")
   imginmodal.src = el.img
   imginmodal.classList.add("imginmodal")
   imgmodal.append(imginmodal)
+
+  // текст
   paraginmodal.textContent = el.par;
   textinmodal.textContent = el.txt;
-  delet.onclick=()=>{
-    newss.remove()
-  }
-  view.onclick=()=>{
-  backmodal.style.display = "block"
-  closesmodal.onclick=()=>{
+
+  closesmodal.onclick = () => {
     backmodal.style.display = "none"
   }
-  }
+}
 });
 }
 render(blocks)
+
 
 const handleCreate = () => {
   let newBlock = {
@@ -90,12 +100,15 @@ const handleCreate = () => {
   };
   blocks.push(newBlock);
   render(blocks);
+  imginp.value = ""
+  nameinp.value = ""
+  tarea.value = ""
 };
 
-
-
-
-
+creatbtn.onclick =()=>{
+  handleCreate()
+  backcreatmodal.style.display = "none"
+}
 
 
 add.onclick = () => {
