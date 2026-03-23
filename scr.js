@@ -1,3 +1,4 @@
+
 let headerd = document.querySelector(".Header");
 let topd = document.querySelector(".top");
 let topright = document.querySelector(".topRight");
@@ -8,8 +9,12 @@ let backcreatmodal = document.querySelector(".backcreatmodal");
 let closes = document.querySelector(".close");
 let cancel = document.querySelector(".Cancel");
 let creatmodaltop = document.querySelector(".creatmodaltop");
-let edit = document.querySelector(".edit");
-let view = document.querySelector(".view");
+let backmodal = document.querySelector(".backmodal")
+let modal = document.querySelector(".modal")
+let imgmodal = document.querySelector(".imgmodal")
+let textmodal = document.querySelector(".textmodal")
+let closesmodal = document.querySelector(".closes")
+
 
 
 let blocks = [
@@ -17,6 +22,7 @@ let blocks = [
 ]
 
 function render(data){
+  middle.innerHTML="";
 data.forEach((el)=>{
   let newss = document.createElement("div");
    newss.classList.add("newss")
@@ -35,13 +41,35 @@ data.forEach((el)=>{
   parag.classList.add("parag")
   parag.textContent = el.par;
   about.append(parag)
-  let text = 
-
-
-
+  let text = document.createElement("p")
+  text.classList.add("text")
+  text.textContent = el.txt;
+  about.append(text)
+  let edit = document.createElement("div")
+  edit.classList.add("edit")
+  newss.append(edit)
+  let view = document.createElement("button")
+  view.textContent = "Просмотр"
+  view.classList.add("view")
+  edit.append(view);
+  let delet = document.createElement("button")
+  delet.textContent = "Удалить"
+  delet.classList.add("delet")
+  edit.append(delet)
+  delet.onclick=()=>{
+    newss.remove()
+  }
+  view.onclick=()=>{
+  backmodal.style.display = "block"
+  closesmodal.onclick=()=>{
+    backmodal.style.display = "none"
+  }
+  }
 });
-
 }
+render(blocks)
+
+
 
 
 

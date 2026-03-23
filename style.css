@@ -56,7 +56,7 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.new {
+.newss {
   margin-top: 30px;
   width: 400px;
   height: 400px;
@@ -93,7 +93,7 @@ body {
   letter-spacing: 1px;
   cursor: pointer;
 }
-.delete {
+.delet {
   width: 120px;
   height: 35px;
   background-color: rgb(181, 41, 41);
