@@ -63,9 +63,10 @@ data.forEach((el)=>{
   delet.textContent = "Удалить"
   delet.classList.add("delet")
   edit.append(delet)
-  delet.onclick=()=>{
-    newss.remove()
-  }
+ delet.onclick = () => {
+  blocks = blocks.filter((item) => item.id !== el.id);
+  render(blocks);
+}
   view.onclick = () => {
   backmodal.style.display = "block"
 
@@ -123,4 +124,7 @@ closes.onclick = closemodal;
 cancel.onclick = closemodal;
 
 
-
+Search.oninput = () => {
+  let searchBlock = blocks.filter((el) => el.par.includes(Search.value));
+  return searchBlock ? render(searchBlock) : render(blocks);
+};
