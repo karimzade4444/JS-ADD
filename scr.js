@@ -89,8 +89,9 @@ data.forEach((el)=>{
     backmodal.style.display = "none"
   }
 }
-count.textContent = "Всего: " + data.length;
+
 });
+count.textContent = "Всего: " + data.length;
 }
 render(blocks)
 
