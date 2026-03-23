@@ -12,6 +12,12 @@ let edit = document.querySelector(".edit");
 let view = document.querySelector(".view");
 let newBL= document.querySelector(".new")
 
+
+let blocks = [
+  {id:1, img: "https://i.pinimg.com/736x/06/14/fa/0614fa155de10e2072149b780c3e2e60.jpg",parag:"Tajikistan", text: "Feel the friendship"}
+]
+
+
 add.onclick = () => {
   backcreatmodal.style.display = "block";
 };
