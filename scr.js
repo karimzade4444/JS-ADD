@@ -23,6 +23,10 @@ let creatbtn = document.querySelector(".Creat");
 const count = document.querySelector(".count");
 let editmodalbtn = document.querySelector(".editmodalbtn")
 let backeditmodal = document.querySelector(".backeditmodal")
+let Canceledit = document.querySelector(".Canceledit")
+let Closeedit = document.querySelector(".closeedit")
+let Editedit=document.querySelector(".Editedit")
+
 
 let blocks = [
   {
@@ -101,6 +105,14 @@ editmodalbtn.onclick = () =>{
   backeditmodal.style.display="block"
   backmodal.style.display="none"
 }
+const closemodaledit = () => {
+  backeditmodal.style.display = "none";
+};
+
+Closeedit.onclick = closemodaledit;
+Canceledit.onclick = closemodaledit;
+
+
 
 
 const handleCreate = () => {
