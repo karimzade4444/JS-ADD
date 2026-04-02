@@ -21,6 +21,7 @@ let tarea = document.querySelector(".tarea");
 let creatcancel = document.querySelector(".CreatCancel");
 let creatbtn = document.querySelector(".Creat");
 const count = document.querySelector(".count");
+let editmodal = document.querySelector(".editmodal")
 
 let blocks = [
   {
