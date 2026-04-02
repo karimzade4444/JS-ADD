@@ -232,7 +232,7 @@ body {
   font-weight: 400;
   font-size: 20px;
 }
-.tarea {
+.tarea  {
   width: 95%;
   margin-left: 2%;
   height: 140px;
@@ -418,4 +418,19 @@ body {
   color: gray;
   font-size: 20px;
   cursor: pointer;
+}
+
+.tareaedit  {
+  width: 95%;
+  margin-left: 2%;
+  height: 140px;
+  border-radius: 15px;
+  border: 1px solid gray;
+  background-color: rgba(255, 255, 255, 0.021);
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
 }

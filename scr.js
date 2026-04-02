@@ -26,7 +26,10 @@ let backeditmodal = document.querySelector(".backeditmodal")
 let Canceledit = document.querySelector(".Canceledit")
 let Closeedit = document.querySelector(".closeedit")
 let Editedit=document.querySelector(".Editedit")
-
+let nameinpedit = document.querySelector(".nameinpedit")
+let imginpedit = document.querySelector(".imginpedit")
+let tareaedit = document.querySelector(".tareaedit")
+let editmodalid = document.querySelector(".id")
 
 let blocks = [
   {
@@ -101,10 +104,39 @@ function render(data) {
 }
 render(blocks);
 
+
+
+
 editmodalbtn.onclick = () =>{
   backeditmodal.style.display="block"
   backmodal.style.display="none"
+  blocks.forEach((elem)=>{
+  editmodalid.value = elem.id;
+  nameinpedit.value = elem.par;
+  imginpedit.value = elem.img;
+  tareaedit.value = elem.txt
+  
+  })
 }
+
+function handleEditFruit() {
+  const myCard = blocks.find((el) => el.id == editmodalid.value);
+  console.log(myCard);
+  if (myCard) {
+  
+    myCard.par = nameinpedit.value;
+    myCard.img = imginpedit.value;
+    myCard.txt = tareaedit.value;
+    render(blocks);
+    backeditmodal.style.display = "none";
+  }
+}
+
+Editedit.onclick = () => {
+  handleEditFruit();
+};
+
+
 const closemodaledit = () => {
   backeditmodal.style.display = "none";
 };
