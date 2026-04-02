@@ -22,6 +22,7 @@ let creatcancel = document.querySelector(".CreatCancel");
 let creatbtn = document.querySelector(".Creat");
 const count = document.querySelector(".count");
 let editmodalbtn = document.querySelector(".editmodalbtn")
+let backeditmodal = document.querySelector(".backeditmodal")
 
 let blocks = [
   {
@@ -95,6 +96,12 @@ function render(data) {
   count.textContent = "Всего: " + data.length;
 }
 render(blocks);
+
+editmodalbtn.onclick = () =>{
+  backeditmodal.style.display="block"
+  backmodal.style.display="none"
+}
+
 
 const handleCreate = () => {
   let newBlock = {

@@ -414,3 +414,8 @@ body {
   border: 1px solid gray;
   cursor: pointer;
 }
+.closeedit {
+  color: gray;
+  font-size: 20px;
+  cursor: pointer;
+}
